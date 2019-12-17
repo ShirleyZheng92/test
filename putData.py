@@ -31,5 +31,10 @@ while True:
 	    }
 	]
 
-	client.write_points(json_body)
+	try:
+		client.write_points(json_body)
+	except Exception as e:
+		print("Error in writing to db", e)
+
 	time.sleep(10)
+
